@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Gold Dust Croton Plant Online | ALLONE Plants</title>
+    <title>Gold Dust Croton | ALLONE Plants</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -29,6 +29,7 @@
             color: var(--charcoal);
             line-height: 1.6;
             background-color: var(--cream);
+            scroll-behavior: smooth;
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -177,78 +178,9 @@
             color: var(--primary-green);
         }
         
-        /* Premium Roadmap Section */
-        .premium-roadmap {
-            background-color: var(--light-green);
-            padding: 4rem 0;
-        }
-        
-        .roadmap-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .roadmap-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--primary-green);
-        }
-        
-        .roadmap-steps {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            margin: 3rem 0;
-        }
-        
-        .roadmap-steps::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--gold);
-            z-index: 1;
-        }
-        
-        .roadmap-step {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            flex: 1;
-        }
-        
-        .step-circle {
-            width: 80px;
-            height: 80px;
-            background: var(--gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 1.8rem;
-            color: var(--charcoal);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        
-        .step-content {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-top: 1rem;
-        }
-        
-        .step-content h3 {
-            color: var(--primary-green);
-            margin-bottom: 0.5rem;
-        }
-        
         /* About Section */
         .about {
-            background-color: white;
+            background-color: var(--light-green);
         }
         
         .about-content {
@@ -300,7 +232,7 @@
         
         /* Product Showcase Section */
         .product-showcase {
-            background-color: var(--light-gray);
+            background-color: white;
         }
         
         .product-container {
@@ -434,6 +366,99 @@
             justify-content: center;
             font-size: 0.8rem;
             font-weight: bold;
+        }
+        
+        /* Journey Section */
+        .journey {
+            background-color: var(--light-gray);
+            padding: 4rem 0;
+        }
+        
+        .journey-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .journey-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-green);
+        }
+        
+        .journey-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+        
+        .journey-text {
+            flex: 1;
+        }
+        
+        .journey-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .journey-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .journey-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 3rem 0;
+        }
+        
+        .journey-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+            z-index: 1;
+        }
+        
+        .journey-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+        
+        .step-circle {
+            width: 80px;
+            height: 80px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.8rem;
+            color: var(--charcoal);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .step-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-top: 1rem;
+        }
+        
+        .step-content h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
         }
         
         /* Testimonials Section */
@@ -769,7 +794,7 @@
         
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .about-content, .product-container {
+            .about-content, .product-container, .journey-content {
                 flex-direction: column;
             }
             
@@ -781,12 +806,12 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             
-            .roadmap-steps {
+            .journey-steps {
                 flex-direction: column;
                 gap: 2rem;
             }
             
-            .roadmap-steps::before {
+            .journey-steps::before {
                 display: none;
             }
         }
@@ -863,9 +888,10 @@
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#premium">Premium</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#product">Buy Now</a></li>
+                    <li><a href="#journey">Journey</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -879,55 +905,7 @@
             <p>Each plant is a unique masterpiece, carefully nurtured and delivered to your home.</p>
             <div>
                 <a href="#product" class="btn">Shop the Collection</a>
-                <a href="#premium" class="btn btn-secondary">Discover Premium →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Premium Roadmap Section -->
-    <section class="premium-roadmap" id="premium">
-        <div class="container roadmap-container">
-            <h2 class="roadmap-title">The Gold Dust Croton Journey</h2>
-            <p style="text-align: center; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                From our nursery to luxury spaces, discover how our premium Gold Dust Crotons transform environments and elevate living experiences.
-            </p>
-            
-            <div class="roadmap-steps">
-                <div class="roadmap-step">
-                    <div class="step-circle">🌱</div>
-                    <div class="step-content">
-                        <h3>Nursery Excellence</h3>
-                        <p>Each plant begins its journey in our controlled nursery environment, receiving expert care and optimal growing conditions.</p>
-                    </div>
-                </div>
-                
-                <div class="roadmap-step">
-                    <div class="step-circle">⭐</div>
-                    <div class="step-content">
-                        <h3>5-Star Hospitality</h3>
-                        <p>Featured in luxury hotels and premium spaces, creating welcoming atmospheres that impress guests and visitors.</p>
-                    </div>
-                </div>
-                
-                <div class="roadmap-step">
-                    <div class="step-circle">🏡</div>
-                    <div class="step-content">
-                        <h3>Home Elegance</h3>
-                        <p>Transforming living spaces into luxurious sanctuaries, adding vibrant color and natural beauty to any room.</p>
-                    </div>
-                </div>
-                
-                <div class="roadmap-step">
-                    <div class="step-circle">💎</div>
-                    <div class="step-content">
-                        <h3>Premium Collection</h3>
-                        <p>Our showcase specimens grace executive offices and designer spaces as statement pieces of natural art.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2rem;">
-                <p><strong>Experience the premium difference</strong> - each plant carries this legacy of excellence.</p>
+                <a href="#about" class="btn btn-secondary">Learn More About Care →</a>
             </div>
         </div>
     </section>
@@ -1045,6 +1023,61 @@
                         <div class="payment-icon">GPay</div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="journey" id="journey">
+        <div class="container journey-container">
+            <h2 class="journey-title">The Gold Dust Croton Journey</h2>
+            
+            <div class="journey-content">
+                <div class="journey-text">
+                    <p>From our nursery to luxury spaces, discover how our premium Gold Dust Crotons transform environments and elevate living experiences.</p>
+                    <p>Each plant carries a legacy of excellence, carefully nurtured from seedling to the stunning specimen that will grace your home or office.</p>
+                </div>
+                <div class="journey-image">
+                    <img src="https://images.unsplash.com/photo-1541417904950-b855846fe074?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Gold Dust Croton in luxury setting">
+                </div>
+            </div>
+            
+            <div class="journey-steps">
+                <div class="journey-step">
+                    <div class="step-circle">🌱</div>
+                    <div class="step-content">
+                        <h3>Nursery Excellence</h3>
+                        <p>Each plant begins its journey in our controlled nursery environment, receiving expert care and optimal growing conditions.</p>
+                    </div>
+                </div>
+                
+                <div class="journey-step">
+                    <div class="step-circle">⭐</div>
+                    <div class="step-content">
+                        <h3>5-Star Hospitality</h3>
+                        <p>Featured in luxury hotels and premium spaces, creating welcoming atmospheres that impress guests and visitors.</p>
+                    </div>
+                </div>
+                
+                <div class="journey-step">
+                    <div class="step-circle">🏡</div>
+                    <div class="step-content">
+                        <h3>Home Elegance</h3>
+                        <p>Transforming living spaces into luxurious sanctuaries, adding vibrant color and natural beauty to any room.</p>
+                    </div>
+                </div>
+                
+                <div class="journey-step">
+                    <div class="step-circle">💎</div>
+                    <div class="step-content">
+                        <h3>Premium Collection</h3>
+                        <p>Our showcase specimens grace executive offices and designer spaces as statement pieces of natural art.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <p><strong>Experience the premium difference</strong> - each plant carries this legacy of excellence.</p>
             </div>
         </div>
     </section>
@@ -1171,9 +1204,9 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#premium">Premium</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#product">Buy Now</a></li>
+                        <li><a href="#journey">Journey</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
