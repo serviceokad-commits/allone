@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Gold Dust Croton Plant Online | AllOne Plants</title>
+    <title>Buy Gold Dust Croton Plant Online | ALLONE Plants</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -64,7 +64,7 @@
         .logo {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: var(--primary-green);
             text-decoration: none;
             display: flex;
@@ -177,9 +177,78 @@
             color: var(--primary-green);
         }
         
+        /* Premium Roadmap Section */
+        .premium-roadmap {
+            background-color: var(--light-green);
+            padding: 4rem 0;
+        }
+        
+        .roadmap-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .roadmap-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-green);
+        }
+        
+        .roadmap-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 3rem 0;
+        }
+        
+        .roadmap-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+            z-index: 1;
+        }
+        
+        .roadmap-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+        
+        .step-circle {
+            width: 80px;
+            height: 80px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.8rem;
+            color: var(--charcoal);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .step-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-top: 1rem;
+        }
+        
+        .step-content h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+        
         /* About Section */
         .about {
-            background-color: var(--light-green);
+            background-color: white;
         }
         
         .about-content {
@@ -231,7 +300,7 @@
         
         /* Product Showcase Section */
         .product-showcase {
-            background-color: white;
+            background-color: var(--light-gray);
         }
         
         .product-container {
@@ -369,7 +438,7 @@
         
         /* Testimonials Section */
         .testimonials {
-            background-color: var(--light-gray);
+            background-color: white;
         }
         
         .testimonials-slider {
@@ -379,7 +448,7 @@
         }
         
         .testimonial {
-            background-color: white;
+            background-color: var(--light-gray);
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
@@ -542,7 +611,7 @@
         .footer-logo {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: white;
             margin-bottom: 1rem;
             display: block;
@@ -711,6 +780,15 @@
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .roadmap-steps {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .roadmap-steps::before {
+                display: none;
+            }
         }
         
         @media (max-width: 768px) {
@@ -780,14 +858,14 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">Gold Dust<span>Crotons</span></a>
+            <a href="#" class="logo">ALL<span>ONE</span></a>
             <button class="mobile-menu-btn">☰</button>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#premium">Premium</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#product">Product</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#product">Buy Now</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -801,7 +879,55 @@
             <p>Each plant is a unique masterpiece, carefully nurtured and delivered to your home.</p>
             <div>
                 <a href="#product" class="btn">Shop the Collection</a>
-                <a href="#about" class="btn btn-secondary">Learn More About Care →</a>
+                <a href="#premium" class="btn btn-secondary">Discover Premium →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Roadmap Section -->
+    <section class="premium-roadmap" id="premium">
+        <div class="container roadmap-container">
+            <h2 class="roadmap-title">The Gold Dust Croton Journey</h2>
+            <p style="text-align: center; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                From our nursery to luxury spaces, discover how our premium Gold Dust Crotons transform environments and elevate living experiences.
+            </p>
+            
+            <div class="roadmap-steps">
+                <div class="roadmap-step">
+                    <div class="step-circle">🌱</div>
+                    <div class="step-content">
+                        <h3>Nursery Excellence</h3>
+                        <p>Each plant begins its journey in our controlled nursery environment, receiving expert care and optimal growing conditions.</p>
+                    </div>
+                </div>
+                
+                <div class="roadmap-step">
+                    <div class="step-circle">⭐</div>
+                    <div class="step-content">
+                        <h3>5-Star Hospitality</h3>
+                        <p>Featured in luxury hotels and premium spaces, creating welcoming atmospheres that impress guests and visitors.</p>
+                    </div>
+                </div>
+                
+                <div class="roadmap-step">
+                    <div class="step-circle">🏡</div>
+                    <div class="step-content">
+                        <h3>Home Elegance</h3>
+                        <p>Transforming living spaces into luxurious sanctuaries, adding vibrant color and natural beauty to any room.</p>
+                    </div>
+                </div>
+                
+                <div class="roadmap-step">
+                    <div class="step-circle">💎</div>
+                    <div class="step-content">
+                        <h3>Premium Collection</h3>
+                        <p>Our showcase specimens grace executive offices and designer spaces as statement pieces of natural art.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <p><strong>Experience the premium difference</strong> - each plant carries this legacy of excellence.</p>
             </div>
         </div>
     </section>
@@ -883,7 +1009,7 @@
                 </div>
                 <div class="product-details">
                     <h1 class="product-title">Gold Dust Croton Plant</h1>
-                    <div class="product-price">$34.99</div>
+                    <div class="product-price" id="product-price">$34.99</div>
                     <div class="product-description">
                         <p>Bring vibrant color and natural beauty to your home with our premium Gold Dust Croton. Each plant is carefully selected for its health and vibrant coloration.</p>
                     </div>
@@ -907,11 +1033,11 @@
                     </div>
                     <div class="size-options">
                         <h3>Select Size:</h3>
-                        <div class="size-option active">Small (6-8")</div>
-                        <div class="size-option">Medium (10-12")</div>
-                        <div class="size-option">Large (14-16")</div>
+                        <div class="size-option active" data-price="24.99">Small (6-8")</div>
+                        <div class="size-option" data-price="34.99">Medium (10-12")</div>
+                        <div class="size-option" data-price="49.99">Large (14-16")</div>
                     </div>
-                    <button class="btn buy-now-btn" id="buy-now-btn">Buy Now</button>
+                    <button class="btn buy-now-btn" id="buy-now-btn">Buy Now - <span id="selected-price">$34.99</span></button>
                     <div class="payment-options">
                         <div class="payment-icon">VISA</div>
                         <div class="payment-icon">MC</div>
@@ -1034,7 +1160,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <a href="#" class="footer-logo">Gold Dust<span>Crotons</span></a>
+                    <a href="#" class="footer-logo">ALL<span>ONE</span></a>
                     <p>Bringing vibrant nature into your home since 2024. We specialize in healthy, beautiful Gold Dust Croton plants delivered directly to you.</p>
                     <div class="newsletter-form">
                         <input type="email" class="newsletter-input" placeholder="Your email">
@@ -1045,9 +1171,9 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
+                        <li><a href="#premium">Premium</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#product">Shop</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#product">Buy Now</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1071,7 +1197,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Gold Dust Crotons. All rights reserved.</p>
+                <p>&copy; 2024 ALLONE. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1107,7 +1233,7 @@
                 </div>
             </div>
             
-            <button class="btn" id="proceed-payment" style="width: 100%; margin-top: 1rem;">Proceed to Payment</button>
+            <button class="btn" id="proceed-payment" style="width: 100%; margin-top: 1rem;">Proceed to Payment - <span id="modal-price">$34.99</span></button>
         </div>
     </div>
 
@@ -1143,8 +1269,11 @@
             });
         });
         
-        // Size Selection
+        // Size Selection with Price Updates
         const sizeOptions = document.querySelectorAll('.size-option');
+        const productPrice = document.getElementById('product-price');
+        const selectedPrice = document.getElementById('selected-price');
+        const modalPrice = document.getElementById('modal-price');
         
         sizeOptions.forEach(option => {
             option.addEventListener('click', () => {
@@ -1152,6 +1281,12 @@
                 sizeOptions.forEach(o => o.classList.remove('active'));
                 // Add active class to clicked option
                 option.classList.add('active');
+                
+                // Update prices
+                const newPrice = option.getAttribute('data-price');
+                productPrice.textContent = `$${newPrice}`;
+                selectedPrice.textContent = `$${newPrice}`;
+                modalPrice.textContent = `$${newPrice}`;
             });
         });
         
