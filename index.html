@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALLONE - Vibrant Plants Delivered</title>
+    <title>Buy Gold Dust Croton Plant Online | AllOne Plants</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -94,31 +94,6 @@
         
         nav ul li a:hover {
             color: var(--primary-green);
-        }
-        
-        .cart-icon {
-            background: none;
-            border: none;
-            font-size: 1.2rem;
-            cursor: pointer;
-            color: var(--charcoal);
-            position: relative;
-        }
-        
-        .cart-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background-color: var(--gold);
-            color: var(--charcoal);
-            border-radius: 50%;
-            width: 18px;
-            height: 18px;
-            font-size: 0.7rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
         }
         
         .mobile-menu-btn {
@@ -254,73 +229,142 @@
             font-size: 1.5rem;
         }
         
-        /* Products Section */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
+        /* Product Showcase Section */
+        .product-showcase {
+            background-color: white;
         }
         
-        .product-card {
-            background-color: white;
+        .product-container {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+        
+        .product-images {
+            flex: 1;
+        }
+        
+        .main-image {
+            width: 100%;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .product-image {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .product-image img {
+        .main-image img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            display: block;
             transition: transform 0.5s;
         }
         
-        .product-card:hover .product-image img {
-            transform: scale(1.05);
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
         }
         
-        .product-info {
-            padding: 1.5rem;
+        .thumbnail {
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s;
         }
         
-        .product-name {
-            font-size: 1.2rem;
+        .thumbnail.active {
+            border-color: var(--primary-green);
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .product-details {
+            flex: 1;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .product-title {
+            font-size: 2rem;
+            color: var(--primary-green);
             margin-bottom: 0.5rem;
         }
         
         .product-price {
+            font-size: 1.8rem;
             font-weight: bold;
             color: var(--primary-green);
-            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-description {
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-features {
+            margin-bottom: 2rem;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+        
+        .feature-icon {
+            margin-right: 0.8rem;
+            color: var(--primary-green);
+        }
+        
+        .size-options {
+            margin-bottom: 2rem;
+        }
+        
+        .size-option {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            border: 2px solid var(--medium-gray);
+            border-radius: 4px;
+            margin-right: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .size-option.active {
+            border-color: var(--primary-green);
+            background-color: var(--light-green);
+        }
+        
+        .buy-now-btn {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.2rem;
             margin-bottom: 1rem;
         }
         
-        .add-to-cart {
-            width: 100%;
-            padding: 0.7rem;
-            background-color: var(--primary-green);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s;
+        .payment-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
         }
         
-        .add-to-cart:hover {
-            background-color: var(--dark-green);
+        .payment-icon {
+            width: 50px;
+            height: 30px;
+            background-color: var(--light-gray);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
         
         /* Testimonials Section */
@@ -587,9 +631,76 @@
             opacity: 0.7;
         }
         
+        /* Payment Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--charcoal);
+        }
+        
+        .payment-option {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid var(--medium-gray);
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .payment-option:hover {
+            border-color: var(--primary-green);
+            background-color: var(--light-green);
+        }
+        
+        .payment-option.active {
+            border-color: var(--primary-green);
+            background-color: var(--light-green);
+        }
+        
+        .payment-icon-large {
+            width: 60px;
+            height: 40px;
+            background-color: var(--light-gray);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+        
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .about-content {
+            .about-content, .product-container {
                 flex-direction: column;
             }
             
@@ -658,6 +769,10 @@
             .process-steps {
                 grid-template-columns: 1fr;
             }
+            
+            .thumbnail-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -671,25 +786,22 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#products">Products</a></li>
+                    <li><a href="#product">Product</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <button class="cart-icon">
-                🛒 <span class="cart-count">0</span>
-            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Bring Home the Vibrant Beauty of Gold Dust Croton</h1>
-            <p>Exquisite, Healthy Gold Dust Croton Plants Delivered to Your Doorstep</p>
+            <h1>Discover the Living Art of Gold Dust Croton</h1>
+            <p>Each plant is a unique masterpiece, carefully nurtured and delivered to your home.</p>
             <div>
-                <a href="#products" class="btn">Shop Now</a>
-                <a href="#about" class="btn btn-secondary">Learn More</a>
+                <a href="#product" class="btn">Shop the Collection</a>
+                <a href="#about" class="btn btn-secondary">Learn More About Care →</a>
             </div>
         </div>
     </section>
@@ -697,7 +809,7 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">Why Choose Gold Dust Croton?</h2>
+            <h2 class="section-title">Meet the Gold Dust Croton</h2>
             <div class="about-content">
                 <div class="about-text">
                     <p>The Gold Dust Croton (Codiaeum variegatum 'Gold Dust') is a stunning evergreen shrub, famous for its dark green leaves generously splashed with bright, sunny-yellow spots. It's more than a plant—it's a statement piece for any room.</p>
@@ -739,60 +851,72 @@
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products" id="products">
+    <!-- Product Showcase Section -->
+    <section class="product-showcase" id="product">
         <div class="container">
-            <h2 class="section-title">Our Gold Dust Croton Collection</h2>
-            <div class="products-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Small Gold Dust Croton">
+            <h2 class="section-title">Find Your Perfect Plant</h2>
+            <div class="product-container">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-product-image" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Gold Dust Croton">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Small Gold Dust Croton</h3>
-                        <p class="product-description">Perfect for desks and small spaces. 6-8 inches tall.</p>
-                        <p class="product-price">$24.99</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Medium Gold Dust Croton">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Medium Gold Dust Croton</h3>
-                        <p class="product-description">Ideal for tabletops and shelves. 10-12 inches tall.</p>
-                        <p class="product-price">$34.99</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1598880940083-ccfa4d12de78?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Large Gold Dust Croton">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Large Gold Dust Croton</h3>
-                        <p class="product-description">Makes a statement in any room. 14-16 inches tall.</p>
-                        <p class="product-price">$49.99</p>
-                        <button class="add-to-cart">Add to Cart</button>
+                    <div class="thumbnail-grid">
+                        <div class="thumbnail active" data-image="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Gold Dust Croton">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                            <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Gold Dust Croton">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1598880940083-ccfa4d12de78?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                            <img src="https://images.unsplash.com/photo-1598880940083-ccfa4d12de78?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Gold Dust Croton">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1598880940083-ccfa4d12de78?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                            <img src="https://images.unsplash.com/photo-1598880940083-ccfa4d12de78?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Gold Dust Croton">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Gold Dust Croton">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                            <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Gold Dust Croton">
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Product 4 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1598880940083-ccfa4d12de78?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Premium Gold Dust Croton Set">
+                <div class="product-details">
+                    <h1 class="product-title">Gold Dust Croton Plant</h1>
+                    <div class="product-price">$34.99</div>
+                    <div class="product-description">
+                        <p>Bring vibrant color and natural beauty to your home with our premium Gold Dust Croton. Each plant is carefully selected for its health and vibrant coloration.</p>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Premium Croton Set</h3>
-                        <p class="product-description">Three plants of varying sizes. Perfect for gifting.</p>
-                        <p class="product-price">$89.99</p>
-                        <button class="add-to-cart">Add to Cart</button>
+                    <div class="product-features">
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Natural air purifier</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Low maintenance</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Pet-friendly*</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Comes with care guide</span>
+                        </div>
+                    </div>
+                    <div class="size-options">
+                        <h3>Select Size:</h3>
+                        <div class="size-option active">Small (6-8")</div>
+                        <div class="size-option">Medium (10-12")</div>
+                        <div class="size-option">Large (14-16")</div>
+                    </div>
+                    <button class="btn buy-now-btn" id="buy-now-btn">Buy Now</button>
+                    <div class="payment-options">
+                        <div class="payment-icon">VISA</div>
+                        <div class="payment-icon">MC</div>
+                        <div class="payment-icon">PP</div>
+                        <div class="payment-icon">GPay</div>
                     </div>
                 </div>
             </div>
@@ -802,7 +926,7 @@
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Customers Say</h2>
+            <h2 class="section-title">Growing Happiness: Customer Stories</h2>
             <div class="testimonials-slider">
                 <div class="testimonial">
                     <div class="stars">★★★★★</div>
@@ -820,7 +944,7 @@
     <!-- Order & Delivery Section -->
     <section class="order-delivery">
         <div class="container">
-            <h2 class="section-title">Easy Ordering & Fast Delivery</h2>
+            <h2 class="section-title">From Our Greenhouse to Your Home</h2>
             <div class="process-steps">
                 <div class="step">
                     <div class="step-icon">🛒</div>
@@ -849,7 +973,7 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
+            <h2 class="section-title">We're Here to Help Your Garden Grow</h2>
             <div class="contact-container">
                 <div class="contact-form">
                     <form id="contactForm">
@@ -860,6 +984,15 @@
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" class="form-control" required>
+                                <option value="">Select a subject</option>
+                                <option value="care">Care Question</option>
+                                <option value="order">Order Issue</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
@@ -873,14 +1006,14 @@
                         <div class="contact-icon">📞</div>
                         <div>
                             <h3>Phone</h3>
-                            <p>1-800-CROTONS</p>
+                            <p>7978411137</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">✉️</div>
                         <div>
                             <h3>Email</h3>
-                            <p>help@golddustcrotons.com</p>
+                            <p>hi@allone.in</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -902,7 +1035,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <a href="#" class="footer-logo">Gold Dust<span>Crotons</span></a>
-                    <p>Bringing vibrant nature into your home since 2023. We specialize in healthy, beautiful Gold Dust Croton plants delivered directly to you.</p>
+                    <p>Bringing vibrant nature into your home since 2024. We specialize in healthy, beautiful Gold Dust Croton plants delivered directly to you.</p>
                     <div class="newsletter-form">
                         <input type="email" class="newsletter-input" placeholder="Your email">
                         <button class="newsletter-btn">Subscribe</button>
@@ -913,7 +1046,7 @@
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#products">Shop</a></li>
+                        <li><a href="#product">Shop</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -938,10 +1071,45 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Gold Dust Crotons. All rights reserved.</p>
+                <p>&copy; 2024 Gold Dust Crotons. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="payment-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">×</button>
+            <h2>Complete Your Purchase</h2>
+            <p>Select your preferred payment method:</p>
+            
+            <div class="payment-option" data-method="card">
+                <div class="payment-icon-large">💳</div>
+                <div>
+                    <h3>Credit/Debit Card</h3>
+                    <p>Pay securely with your card</p>
+                </div>
+            </div>
+            
+            <div class="payment-option" data-method="paypal">
+                <div class="payment-icon-large">PP</div>
+                <div>
+                    <h3>PayPal</h3>
+                    <p>Fast and secure payment</p>
+                </div>
+            </div>
+            
+            <div class="payment-option" data-method="googlepay">
+                <div class="payment-icon-large">G</div>
+                <div>
+                    <h3>Google Pay</h3>
+                    <p>Quick payment with Google</p>
+                </div>
+            </div>
+            
+            <button class="btn" id="proceed-payment" style="width: 100%; margin-top: 1rem;">Proceed to Payment</button>
+        </div>
+    </div>
 
     <script>
         // Mobile Menu Toggle
@@ -960,28 +1128,70 @@
             });
         });
         
-        // Add to Cart Functionality
-        const addToCartButtons = document.querySelectorAll('.add-to-cart');
-        const cartCount = document.querySelector('.cart-count');
-        let count = 0;
+        // Image Gallery
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.getElementById('main-product-image');
         
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                count++;
-                cartCount.textContent = count;
-                
-                // Add a simple animation to the button
-                button.textContent = 'Added!';
-                button.style.backgroundColor = '#4CAF50';
-                
-                setTimeout(() => {
-                    button.textContent = 'Add to Cart';
-                    button.style.backgroundColor = '';
-                }, 1500);
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                // Remove active class from all thumbnails
+                thumbnails.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked thumbnail
+                thumbnail.classList.add('active');
+                // Update main image
+                mainImage.src = thumbnail.getAttribute('data-image');
             });
         });
         
-        // Testimonial Slider (Simple version)
+        // Size Selection
+        const sizeOptions = document.querySelectorAll('.size-option');
+        
+        sizeOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // Remove active class from all options
+                sizeOptions.forEach(o => o.classList.remove('active'));
+                // Add active class to clicked option
+                option.classList.add('active');
+            });
+        });
+        
+        // Payment Modal
+        const buyNowBtn = document.getElementById('buy-now-btn');
+        const paymentModal = document.getElementById('payment-modal');
+        const closeModal = document.getElementById('close-modal');
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        const proceedPaymentBtn = document.getElementById('proceed-payment');
+        let selectedPaymentMethod = null;
+        
+        buyNowBtn.addEventListener('click', () => {
+            paymentModal.style.display = 'flex';
+        });
+        
+        closeModal.addEventListener('click', () => {
+            paymentModal.style.display = 'none';
+        });
+        
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // Remove active class from all options
+                paymentOptions.forEach(o => o.classList.remove('active'));
+                // Add active class to clicked option
+                option.classList.add('active');
+                selectedPaymentMethod = option.getAttribute('data-method');
+            });
+        });
+        
+        proceedPaymentBtn.addEventListener('click', () => {
+            if (selectedPaymentMethod) {
+                alert(`Redirecting to ${selectedPaymentMethod.toUpperCase()} payment gateway...`);
+                // In a real implementation, you would redirect to the actual payment gateway
+                // window.location.href = `/payment/${selectedPaymentMethod}`;
+            } else {
+                alert('Please select a payment method');
+            }
+        });
+        
+        // Testimonial Slider
         const testimonialText = document.querySelector('.testimonial-text');
         const testimonialAuthor = document.querySelector('.testimonial-author');
         const nextBtn = document.querySelector('.next');
